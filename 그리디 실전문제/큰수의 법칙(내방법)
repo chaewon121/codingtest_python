@@ -1,0 +1,7 @@
+N,M,k=map(int,input().split())
+data=list(map(int,input().split()))
+data.sort()
+f=data[N-1]
+s=data[N-2]
+cnt=(M//(k+1))*(f*k+s)+f*(M%(k+1))
+print(cnt)
