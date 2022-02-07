@@ -1,0 +1,14 @@
+import sys
+input = lambda : sys.stdin.readline().rstrip()
+#sys.setrecursionlimit(10**6)
+def seqeuntial_search(n,target,array):
+  for i in range(n):
+    if target==array[i]:
+      return i+1
+print("원소개수와 탐색할 문자를 입력하세요")
+In= input().split()
+n=int(In[0])
+target=In[1]
+print("원소개수만큼 문자들을 입력하세요")
+array=input().split()
+print(seqeuntial_search(n,target,array))
