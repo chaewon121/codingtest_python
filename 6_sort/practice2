@@ -1,0 +1,9 @@
+n=int(input())
+result=[]
+
+for i in range(n):
+  name=input().split()
+  result.append((name[0],int(name[1]))) 
+result.sort(key=lambda x:x[1])
+for x in result:
+  print(x[0],end=" ")
