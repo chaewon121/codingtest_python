@@ -2,22 +2,27 @@ import sys
 
 input = lambda : sys.stdin.readline().rstrip()
 #sys.setrecursionlimit(10**6)
-n=list(input())
-result=0
-for i in n:
-    a=int(i)
-    result=max(result*a,result+a)
-print(result)
+data=list(input())
+cnt=0
+
+for i in range(len(data)):
+
+    if i-1>=0:
+        if data[i] != data[i - 1]:
+
+            cnt+=1
+
+if cnt%2!=0:
+    print(cnt//2+1)
+else:
+    print(cnt//2)
 
 
 
 '''
 [input]
-02984
+0001100
 [output]
-576
-[input]
-567
-[output]
-210
+1
+
 '''
